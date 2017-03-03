@@ -1,0 +1,359 @@
+﻿
+@{
+    ViewBag.Title = "Insertar";
+}
+
+<!-- begin #content -->
+<div id="content" class="content" style="margin-top:-20px !important;">
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-md-12">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                @*<div class="panel-heading">
+                        <div class="panel-heading-btn">
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                        <h4 class="panel-title">Form Wizards</h4>
+                    </div>*@
+                <div class="panel-body">
+                    <form action="@Url.Action("Insertar", "Flotilla")" method="POST">
+                        <div id="wizard">
+                            <ol>
+                                <li>
+                                    VENTAS
+                                    <small>Ventas a Realizar</small>
+                                </li>
+                                <li>
+                                    EDICION DE LA VENTA
+                                    <small>Modificacio del adeudo, telefono, etc...</small>
+                                </li>
+                                <li>
+                                    CANCELACION DE VENTA
+                                    <small>Cancela venta(Tour o Pquete)</small>
+                                </li>
+                                @*<li>
+                                        Completed
+                                        <small>Sed nunc neque, dapibus non leo sed, rhoncus dignissim elit.</small>
+                                    </li>*@
+                            </ol>
+                            <!-- begin wizard step-1 -->
+
+                            <div>
+                                <fieldset>
+                                    <legend class="pull-left width-full">VENTAS</legend>
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-4 -->
+                                        <div class="form-group">
+                                            <div class="col-md-2">
+                                                <span class="label label-default">Fecha Venta</span>
+                                                <div class="input-group date" id="FechaVenta">
+                                                    <input type="text" class="form-control input-sm" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-default">Seleccione Prodcuto</span>
+                                                <select class="form-control input-sm">
+                                                    @foreach (var item in ViewBag.listasProducto)
+                                                    {
+                                                    <option value="@item.idProducto">@item.cmpProducto</option>
+                                                    }
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-default">Seleccione Tour</span>
+                                                <select class="form-control input-sm">
+                                                    @foreach (var item in ViewBag.listaOrigenTour)
+                                                    {
+                                                    <option value="@item.idOrigenTour">@item.descripcion</option>
+                                                    }
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-default">Seleccione Paquete</span>
+                                                <select class="form-control input-sm">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-default">Tipo Costo</span>
+                                                <select class="form-control input-sm">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Costo Venta</span>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input type="text" class="form-control input-sm" disabled>
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                    <br />
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-4 -->
+                                        <div class="form-group">
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Costo Vendido</span>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input type="text" class="form-control input-sm">
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <span class="label label-primary">Adultos</span>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control input-sm">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa  fa-user"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <span class="label label-primary">Niños</span>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control input-sm">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa  fa-child"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Pax</span>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control input-sm" disabled>
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-plus"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Fecha Inicio</span>
+                                                <div class="input-group date" id="FechaInicio">
+                                                    <input type="text" class="form-control input-sm" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Fecha Final</span>
+                                                <div class="input-group date" id="FechaFinal">
+                                                    <input type="text" class="form-control input-sm" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                    <br />
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-4 -->
+                                        <div class="form-group">
+
+                                            <div class="col-md-4">
+                                                <span class="label label-success">Nombre Cliente</span>
+                                                <input type="text" class="form-control input-sm" id="cliente" />
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-success">Telefono Cliente</span>
+                                                <input type="text" class="form-control input-sm" id="masked-input-phone" placeholder="(961) 999-9999">
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-success">Correo Cliente</span>
+                                                <input type="text" class="form-control input-sm" id="correo">
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <span class="label label-success">Observaciones</span>
+                                                <input type="text" class="form-control input-sm" id="recoger">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                    <br />
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-4 -->
+                                        <div class="form-group">
+
+                                            <div class="col-md-2">
+                                                <span class="label label-warning">Forma de Pago</span>
+                                                <select class="form-control input-sm">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-warning">Banco</span>
+                                                <select class="form-control input-sm">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Total </span>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input type="text" class="form-control input-sm" disabled>
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Anticipo </span>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input type="text" class="form-control input-sm">
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <span class="label label-primary">Adeudo </span>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input type="text" class="form-control input-sm" disabled>
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <br />
+                                                <div class="input-group">
+                                                    <button type="submit" class="btn btn-primary btn-sm m-r-5">Agregar...</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+
+                                </fieldset>
+                            </div>
+                            <!-- end wizard step-1 -->
+                            <!-- begin wizard step-2 -->
+                            <div>
+                                <fieldset>
+                                    <legend class="pull-left width-full">Contact Information</legend>
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-6 -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="text" name="phone" placeholder="123-456-7890" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <!-- end col-6 -->
+                                        <!-- begin col-6 -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Email Address</label>
+                                                <input type="text" name="email" placeholder="someone@example.com" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <!-- end col-6 -->
+                                    </div>
+                                    <!-- end row -->
+                                </fieldset>
+                            </div>
+                            <!-- end wizard step-2 -->
+                            <!-- begin wizard step-3 -->
+                            <div>
+                                <fieldset>
+                                    <legend class="pull-left width-full">Login</legend>
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-4 -->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <div class="controls">
+                                                    <input type="text" name="username" placeholder="johnsmithy" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end col-4 -->
+                                        <!-- begin col-4 -->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Pasword</label>
+                                                <div class="controls">
+                                                    <input type="password" name="password" placeholder="Your password" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end col-4 -->
+                                        <!-- begin col-4 -->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Confirm Pasword</label>
+                                                <div class="controls">
+                                                    <input type="password" name="password2" placeholder="Confirmed password" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end col-6 -->
+
+                                    </div>
+                                    <!-- end row -->
+
+                                </fieldset>
+                            </div>
+                            <!-- end wizard step-3 -->
+                            <!-- begin wizard step-4 -->
+                            @*<div>
+                                    <div class="jumbotron m-b-0 text-center">
+                                        <h1>Login Successfully</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat commodo porttitor. Vivamus eleifend, arcu in tincidunt semper, lorem odio molestie lacus, sed malesuada est lacus ac ligula. Aliquam bibendum felis id purus ullamcorper, quis luctus leo sollicitudin. </p>
+                                        <p><a class="btn btn-success btn-lg" role="button">Proceed to User Profile</a></p>
+                                    </div>
+                                </div>*@
+                            <!-- end wizard step-4 -->
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+</div>
+<!-- end #content -->

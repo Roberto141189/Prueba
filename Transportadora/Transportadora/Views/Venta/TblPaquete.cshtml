@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<thead>
+    <tr>
+        <th>Fecha </th>
+        <th>Detalle Tour </th>
+        <th>Hora Salida </th>
+        <th>Hora Llegada </th>
+    </tr>
+</thead>
+<tbody id="body-data-table">
+   
+    @{        
+        //document.getElementById(id);
+        string fe = "";
+        // var dato = "document.getElementById('fechaIniciop').value ";
+        // ClientScriptManager cs = Page.ClientScript;
+
+        // cs.RegisterStartupScript(this.GetType(), "addContact", dato, true);
+        //string fe = cs.ToString(); ;//doc.GetElementById("fechaIniciop").Value;
+        //string fe = string(elem);
+        int suma = 0;
+    }
+
+    @foreach (var item in ViewBag.listaPaqueteTour)
+    {
+
+        DateTime fecha = Convert.ToDateTime(fe);
+        suma = suma + 1;
+        if (suma > 1)
+        {
+            fecha = fecha.AddDays(1);
+        }
+        fe = fecha.ToString("dd-MM-yyyy");
+        <tr>
+            <td>@fe</td>
+            <td>@item.idPaquete</td>
+            <td>@item.parenTour.tour</td>
+            <td>@item.parenTour.tour</td>
+        </tr>
+    }
+</tbody>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        Tbl_1.init();
+    });
+
+
+</script>
+
+
+
+
+
+
+

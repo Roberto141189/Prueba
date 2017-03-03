@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Color Admin | Blank Page</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="~/Content/template/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/css/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/css/style.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/css/style-responsive.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/css/theme/default.css" rel="stylesheet" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN PAGE CSS STYLE ================== -->
+    <link href="~/Content/template/assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/powerange/powerange.min.css" rel="stylesheet" />
+    <!-- ================== END PAGE CSS STYLE ================== -->
+    <link href="~/Content/Template/assets/css/bootstrapl.min.css" rel="stylesheet" />
+    <script src="~/Content/Template/assets/js/jqueryl.min.js"></script>
+
+    <script src="~/Content/Template/assets/js/bootstrapl.min.js"></script>
+
+
+    <!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+    <link href="~/Content/template/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/ionRangeSlider/css/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/ionRangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+    @*<link href="~/Content/templateassets/plugins/password-indicator/css/password-indicator.css" rel="stylesheet" />*@
+    <link href="~/Content/template/assets/plugins/bootstrap-combobox/css/bootstrap-combobox.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/jquery-tag-it/css/jquery.tagit.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+    <link href="~/Content/template/assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/Template/assets/css/bootstrap-datetimepickeres.min.css" rel="stylesheet" />
+    @*<link href="~/Content/templateassets/plugins/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />*@
+    <link href="~/Content/template/assets/plugins/bootstrap-wizard/css/bwizard.min.css" rel="stylesheet" />
+    <!-- ================== END PAGE LEVEL STYLE ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/Content/template/assets/plugins/pace/pace.min.js"></script>
+    <script src="~/Funciones/Funciones.js"></script>
+
+    <!-- ================== END BASE JS ================== -->
+</head>
+<body>
+    <!-- begin #page-loader -->
+    <div id="page-loader" class="fade in"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="page-container fade page-without-sidebar page-header-fixed page-with-top-menu">
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-default navbar-fixed-top">
+            <!-- begin container-fluid -->
+            <div class="container-fluid">
+                <!-- begin mobile sidebar expand / collapse button -->
+                <div class="navbar-header">
+                    <!--<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> Color Admin</a>-->
+                    <img src="http://mexicatours.com/wp-content/uploads/2016/12/logo.png" width="200px" alt="Alternate Text" />
+                    <button type="button" class="navbar-toggle" data-click="top-menu-toggled">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- end mobile sidebar expand / collapse button -->
+                <!-- begin header navigation right -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form full-width">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Buscar..." />
+                                <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label">5</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown navbar-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="~/Content/template/assets/img/user-13.jpg" alt="" />
+                            <span class="hidden-xs">Usuario x</span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInLeft">
+                            <li class="arrow"></li>
+                            @*<li><a href="javascript:;">Edit Profile</a></li>
+                                <li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+                                <li><a href="javascript:;">Calendar</a></li>
+                                <li><a href="javascript:;">Setting</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:;">Log Out</a></li>*@
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end header navigation right -->
+            </div>
+            <!-- end container-fluid -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #top-menu -->
+        <div id="top-menu" class="top-menu">
+            <!-- begin top-menu nav -->
+            <ul class="nav">
+                <li class="has-sub">
+                    <a href="javascript:;">
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-align-left"></i>
+                        <span>Contabilidad</span>
+
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                Catalogos
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="has-sub">
+                                    <a href="javascript:;">
+                                        <b class="caret pull-right"></b>
+                                        Cuentas
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:;">Registrar</a></li>
+                                        <li><a href="javascript:;">Ver</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="javascript:;">
+                                        <b class="caret pull-right"></b>
+                                        Bancos
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:;">Registrar</a></li>
+                                        <li><a href="javascript:;">Ver</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                Movimientos
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="@Url.Action("Registrar", "Movimiento")">Registrar</a></li>
+                                <li><a href="javascript:;">ver</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+                @*<li class="menu-control menu-control-left">
+                        <a href="#" data-click="prev-menu"><i class="fa fa-angle-left"></i></a>
+                    </li>
+                    <li class="menu-control menu-control-right">
+                        <a href="#" data-click="next-menu"><i class="fa fa-angle-right"></i></a>
+                    </li>*@
+            </ul>
+            <!-- end top-menu nav -->
+        </div>
+        <!-- end #top-menu -->
+        <!-- begin #content -->
+        <div id="content" class="content">
+            @RenderBody()
+            <!-- end #content -->
+            <!-- begin scroll to top btn -->
+            <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+            <!-- end scroll to top btn -->
+        </div>
+        <!-- end page container -->
+    </div>
+
+    @*<div class="container body-content">
+            @RenderBody()
+            <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+        </div>*@
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/Content/template/assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+    <script src="~/Content/template/assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+    <script src="~/Content/template/assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="assets/crossbrowserjs/html5shiv.js"></script>
+        <script src="assets/crossbrowserjs/respond.min.js"></script>
+        <script src="assets/crossbrowserjs/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="~/Content/template/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/template/assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/Content/template/assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/jszip.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/pdfmake.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/vfs_fonts.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+    <script src="~/Content/template/assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/template/assets/js/table-manage-buttons.demo.min.js"></script>
+
+    <script src="~/Content/template/assets/plugins/bootstrap-wizard/js/bwizard.js"></script>
+    <script src="~/Content/template/assets/js/form-wizards.demo.min.js"></script>
+
+
+    <script src="~/Content/template/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/template/assets/plugins/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="~/Content/template/assets/plugins/masked-input/masked-input.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="~/Content/template/assets/plugins/password-indicator/js/password-indicator.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.js"></script>
+    <script src="~/Content/template/assets/plugins/jquery-tag-it/js/tag-it.min.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-daterangepicker/moment.js"></script>
+    <script src="~/Content/template/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="~/Content/template/assets/plugins/select2/dist/js/select2.min.js"></script>
+    <script src="~/Content/Template/assets/plugins/bootstrap-datetimepicker/js/moment.min.js"></script>
+    <script src="~/Content/Template/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepickeres.min.js"></script>
+    <script src="~/Content/Template/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepickeres.es.js"></script>
+    @*<script src="~/Content/template/assets/plugins/bootstrap-eonasdan-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>*@
+    <script src="~/Content/template/assets/js/form-plugins.demo.min.js"></script>
+    <script src="~/Content/template/assets/js/apps.min.js"></script>
+    <script src="~/Funciones/Funciones.js"></script>
+    <script src="~/Content/miCodigos/js/jsAjaxs.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            App.init();
+            FormPlugins.init();
+            FormWizard.init();
+
+            $("#idTour").change(function () {
+                var precio = $(this).find(':selected').data('costo');
+                document.getElementById("costoVentat").value = precio;
+            });
+            // format: 'YYYY-MM-DD HH:mm'
+
+            $('#FechaVentat').datetimepicker({
+                format: 'DD/MM/YYYY'
+            });
+            $('#FechaIniciot').datetimepicker({
+                format: 'DD-MM-YYYY'
+            });
+            $('#FechaFinalt').datetimepicker({
+                format: 'DD-MM-YYYY'
+            });
+
+            $('#FechaVentap').datetimepicker({
+                format: 'DD/MM/YYYY'
+            });
+            $('#FechaIniciop').datetimepicker({
+                format: 'DD-MM-YYYY'
+            });
+            //$('#FechaFinalp').datetimepicker({
+            //    format: 'DD-MM-YYYY'
+            //});
+
+            var fx1 = document.getElementById('adultost');
+            var fx2 = document.getElementById('ninost');
+            var pax = document.getElementById('paxt');
+            fx2.addEventListener('input', function () {
+                var error = true;
+                try {
+                    if (fx1.value != null) {
+                        pax.value = eval(parseInt(fx2.value) + parseInt(fx1.value));
+                        total.value = eval(parseInt(pax.value) * parseInt(costoVendido.value))
+                        error = false;
+                    }
+                } catch (err) { }
+                if (error)
+                    pax.value = "Error";
+            });
+            fx1.addEventListener('input', function () {
+                var error = true;
+                try {
+                    if (fx2.value != null) {
+                        pax.value = eval(parseInt(fx2.value) + parseInt(fx1.value));
+                        //total.value = eval(parseInt(pax.value) * parseInt(costoVendido.value))
+                        error = false;
+                    }
+                } catch (err) { }
+                if (error)
+                    pax.value = "Error";
+            });
+
+            //var fx1 = document.getElementById('adultost');
+            //var fx2 = document.getElementById('ninost');
+            //pax = document.getElementById('paxt');
+            //costoVendido = document.getElementById('costoVendidot');
+            //total = document.getElementById('totalt');
+            //anticipo = document.getElementById('anticipot');
+            //saldo = document.getElementById('saldot');
+
+            //fx2.addEventListener('input', function () {
+            //    var error = true;
+            //    try {
+            //        if (fx1.value != null) {
+            //            pax.value = eval(parseInt(fx2.value) + parseInt(fx1.value));
+            //            total.value = eval(parseInt(pax.value) * parseInt(costoVendido.value))
+            //            error = false;
+            //        }
+            //    } catch (err) { }
+            //    if (error)
+            //        pax.value = "Error";
+            //});
+
+            //costoVendido.addEventListener('input', function () {
+            //    var error = true;
+            //    try {
+            //        if (fx1.value != null) {
+            //            pax.value = eval(parseInt(fx2.value) + parseInt(fx1.value));
+            //            total.value = eval(parseInt(pax.value) * parseInt(costoVendido.value))
+            //            error = false;
+            //        }
+            //    } catch (err) { }
+            //    if (error)
+            //        pax.value = "Error";
+            //});
+
+            //anticipo.addEventListener('input', function () {
+            //    var error = true;
+            //    try {
+            //        if (total.value != null) {
+            //            saldo.value = eval(parseInt(total.value) - parseInt(anticipo.value));
+            //            error = false;
+            //        }
+            //    } catch (err) { }
+            //    if (error)
+            //        pax.value = "Error";
+            //});
+            //----------------------------------------------------------------------------------------------------------------
+            var paxe = 0;
+            var precio = 0;
+            var extra = 0;
+            var ndias = 0;
+            $("#idPaquete").change(function () {
+                precio = $(this).find(':selected').data('costo');
+                document.getElementById("costoVentap").value = precio;
+                paxe = $(this).find(':selected').data('npax');
+                document.getElementById("nPaxp").value = paxe;
+                extra = $(this).find(':selected').data('extra');
+                document.getElementById("gastoExtrap").value = extra;
+                ndias = $(this).find(':selected').data('ndias');
+                document.getElementById("nDias").value = ndias;
+
+                document.getElementById('adultosp').value = "";
+                document.getElementById('ninosp').value = "";
+                document.getElementById('totalExtrap').value = "";
+                document.getElementById('paxp').value = "";
+                document.getElementById('totalp').value = "";
+            });
+
+            var fx11 = document.getElementById('adultosp');
+            var fx22 = document.getElementById('ninosp');
+            paxp = document.getElementById('paxp');
+            costoVendidop = document.getElementById('costoVendidop');
+            totalp = document.getElementById('totalp');
+            anticipop = document.getElementById('anticipop');
+            saldop = document.getElementById('saldop');
+            totalExtrap = document.getElementById('totalExtrap');
+            fx22.addEventListener('input', function () {
+                var error = true;
+                try {
+                    if (fx11.value != null) {
+                        paxp.value = eval(parseInt(fx22.value) + parseInt(fx11.value) + parseInt(document.getElementById("nPaxp").value));
+                        totalExtrap.value = eval((parseInt(fx22.value) + parseInt(fx11.value)) * document.getElementById("gastoExtrap").value);
+                        totalp.value = eval(parseInt(totalExtrap.value) + parseInt(document.getElementById("costoVentap").value));
+                        error = false;
+                    }
+                } catch (err) { }
+                if (error)
+                    pax.value = "Error";
+            });
+
+            costoVendidop.addEventListener('input', function () {
+                var error = true;
+                try {
+                    document.getElementById("totalpF").value = document.getElementById('costoVendidop').value;
+                    error = false;
+                } catch (err) { }
+                if (error)
+                    document.getElementById("totalpF").value = "Error";
+            });
+
+            anticipop.addEventListener('input', function () {
+                var error = true;
+                try {
+                    if (totalp.value != null) {
+                        saldop.value = eval(parseInt(totalpF.value) - parseInt(anticipop.value));
+                        error = false;
+                    }
+                } catch (err) { }
+                if (error)
+                    anticipop.value = "Error";
+            });
+
+            Tbl_1.init();
+        });
+    </script>
+</body>
+</html>
